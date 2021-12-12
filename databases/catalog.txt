@@ -1,0 +1,8 @@
+1
+2500
+Vinogradov.jpg
+size: XL, color: Grey
+2
+1700
+51VW.jpg
+size: S, color: Black
