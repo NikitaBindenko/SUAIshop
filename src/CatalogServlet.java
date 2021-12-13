@@ -9,9 +9,4 @@ public class CatalogServlet extends HttpServlet {
         response.setContentType("text/html");
         request.getRequestDispatcher("front/src/index.html").include(request, response);
     }
-    
-   protected void doPost(HttpServletRequest request, HttpServletResponse response)
-                    throws ServletException, IOException {
-         doGet(request, response);
-    }
 }
