@@ -11,7 +11,16 @@ public class LoginServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("pass");
         PrintWriter out = response.getWriter();
-        request.getRequestDispatcher("front/src/profile/profile.html").include(request, response);
+        
+        Database userlist = new Database();
+        User loggingUser = userlist.getUser(name);
+        
+        if(loggingUser.getPassword().equals(password)){
+        	request.getRequestDispatcher("front/src/profile/profile.html").include(request, response);
+        }
+        else{
+        	out.println("<!DOCTYPE html><html><body>" + loggingUser.getPassword() + "\n" + loggingUser.getLogin() + "</body</html>");
+        }
         out.close();
     }
 }
