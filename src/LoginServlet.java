@@ -16,10 +16,12 @@ public class LoginServlet extends HttpServlet {
         User loggingUser = userlist.getUser(name);
         
         if(loggingUser.getPassword().equals(password)){
+        	HttpSession session = request.getSession();
+        	session.setAttribute("user", loggingUser);	//associates session with object User
         	request.getRequestDispatcher("front/src/profile/profile.html").include(request, response);
         }
         else{
-        	out.println("<!DOCTYPE html><html><body>" + loggingUser.getPassword() + "\n" + loggingUser.getLogin() + "</body</html>");
+        	out.println("<!DOCTYPE html><html><body>" + "Please, try again..." + "</body</html>");
         }
         out.close();
     }

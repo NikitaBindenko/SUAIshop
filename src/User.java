@@ -14,6 +14,7 @@ public class User {
         this.login = login;
         this.password = password;
         isSeller = false;
+        if (id == 0) { isSeller = true; }
         bin = new Bin();
     }
     public User(String login, String password) {  //admin id = 0

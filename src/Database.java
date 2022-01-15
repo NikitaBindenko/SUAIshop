@@ -29,7 +29,7 @@ public class Database {
         return users;
     }
 
-    public synchronized void exportUsers () {    //записывает текущую базу в памяти в файл
+    public synchronized void exportUsers() {    //записывает текущую базу в памяти в файл
         StringBuilder sb = new StringBuilder();
         for(int userNumber = 0; userNumber < db.size(); userNumber++){
             sb.append(db.get(userNumber).getId() + " " + db.get(userNumber).getLogin() + " " + db.get(userNumber).getPassword() + "\n");

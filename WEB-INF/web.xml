@@ -26,6 +26,16 @@
 </servlet-mapping>
 
 <servlet>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>LogoutServlet</servlet-class>
+ </servlet>
+
+ <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+</servlet-mapping>
+
+<servlet>
     <servlet-name>registration</servlet-name>
     <servlet-class>RegistrationServlet</servlet-class>
  </servlet>
@@ -33,6 +43,16 @@
  <servlet-mapping>
     <servlet-name>registration</servlet-name>
     <url-pattern>/registration</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>bin</servlet-name>
+    <servlet-class>BinServlet</servlet-class>
+ </servlet>
+
+ <servlet-mapping>
+    <servlet-name>bin</servlet-name>
+    <url-pattern>/addItem</url-pattern>
 </servlet-mapping>
 
 </web-app>
