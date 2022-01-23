@@ -14,7 +14,7 @@ public class ProfileServlet extends HttpServlet {
         User user = (User)session.getAttribute("user");
         
         String username = user.getLogin();
-        out.println("<!DOCTYPE html><html><body>" + "Salam aleikum " + username + "</body</html>");)	//заглушка для html страниц
+        out.println("<!DOCTYPE html><html><body>" + "Salam aleikum " + username + "</body</html>");	//заглушка для html страниц
         
         out.close();
     }

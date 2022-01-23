@@ -14,7 +14,7 @@ public class AdminServlet extends HttpServlet {
         User user = (User)session.getAttribute("user");
         
         if(user.isSeller()){out.println("<!DOCTYPE html><html><body>" + "You are successfully logged as ADMINISTRATOR" + "</body</html>");}	//заглушка
-        else(out.println("<!DOCTYPE html><html><body>" + "You don't have enough rights to access this page..." + "</body</html>");)		//для html страниц
+        else{out.println("<!DOCTYPE html><html><body>" + "You don't have enough rights to access this page..." + "</body</html>");}		//для html страниц
         
         out.close();
     }
