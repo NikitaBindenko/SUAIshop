@@ -45,14 +45,4 @@
     <url-pattern>/registration</url-pattern>
 </servlet-mapping>
 
-<servlet>
-    <servlet-name>bin</servlet-name>
-    <servlet-class>BinServlet</servlet-class>
- </servlet>
-
- <servlet-mapping>
-    <servlet-name>bin</servlet-name>
-    <url-pattern>/addItem</url-pattern>
-</servlet-mapping>
-
 </web-app>
