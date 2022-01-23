@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class Catalog {
 
     LinkedList<Goods> db;
-    String directory = System.getProperty("user.dir") + "/databases/catalog.txt";	//считая что рабочая директория /SUAIshop
-    File catalog = new File(directory);
+    File catalog = new File("/home/user/tomcat9/apache-tomcat-9.0.54/webapps/SUAIshop/databases/catalog.txt");
 
     Catalog(){
         db = new LinkedList<>();
