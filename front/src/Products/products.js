@@ -11,7 +11,11 @@ class Products {
                     <span class="elm__price">
                         👨🏻‍🚀${price.toLocaleString()} RUB
                     </span>
+                    <form method "GET" action = "BinServlet">
+                    <input type="hidden" name="id" value=${id} />
+                    <input type="hidden" name="act" value="1" />
                     <button class="elm__btn">Добавить в корзину</button>
+                    </form>
                 </li>
             `;
         });
