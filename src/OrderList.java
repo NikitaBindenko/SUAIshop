@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 public class OrderList {
     LinkedList<Order> db;
-    String directory = System.getProperty("user.dir") + "/databases/orders.txt";	//считая что рабочая директория /SUAIshop
-    File orderList = new File(directory);
+    File directory = new File(System.getProperty("user.dir"));
+    String dbFilesDirectory = directory.getParent();
+    File orderList = new File(dbFilesDirectory + "/webapps/SUAIshop/databases/orders.txt");
     
     public OrderList(Catalog catalog){
         db = new LinkedList<>();

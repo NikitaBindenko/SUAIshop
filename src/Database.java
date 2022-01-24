@@ -4,7 +4,10 @@ import java.util.*;
 public class Database {
 
     LinkedList<User> db;
-    File userList = new File("/home/user/tomcat9/apache-tomcat-9.0.54/webapps/SUAIshop/databases/list.txt");	//с полным путем работает, с относительным чет не получается
+    //File userList = new File("/home/user/tomcat9/apache-tomcat-9.0.54/webapps/SUAIshop/databases/list.txt");	//с полным путем работает, с относительным чет не получается
+    File directory = new File(System.getProperty("user.dir"));
+    String dbFilesDirectory = directory.getParent();
+    File userList = new File(dbFilesDirectory + "/webapps/SUAIshop/databases/list.txt");
 
     public Database(){
         db = new LinkedList<>();
