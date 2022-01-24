@@ -10,8 +10,11 @@ public class LogoutServlet extends HttpServlet {
         response.setContentType("text/html");
          HttpSession session = request.getSession();
          session.invalidate();
-        PrintWriter out = response.getWriter();
-        request.getRequestDispatcher("front/src/index.html").include(request, response);
-        out.close();
+        //PrintWriter out = response.getWriter();
+        //request.getRequestDispatcher("front/src/index.html").include(request, response);
+        ServletContext servletContext = getServletContext();
+        RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/catalog");
+        requestDispatcher.forward(request, response);
+        //out.close();
     }
 }
