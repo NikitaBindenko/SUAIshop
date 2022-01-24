@@ -46,7 +46,7 @@ public class Order {    //заказ знает своего заказчка, �
 
     public void setOrder(LinkedList<Goods> order) { this.order = order; }
 
-    public int getStatus() { return status; } //0 - заказ создан, 1 - заказ передан в пути, 2 - заказ прибыл, 3 - заказ получен
+    public int getStatus() { return status; } //0 - заказ создан, 1 - заказ передан в пути, 2 - заказ получен
 
     public void updateStatus(){ status++; }
 
