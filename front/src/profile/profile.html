@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUAI_SHOP</title>
+    <link rel="stylesheet" href="front/src/profile/profile_style.css">
+    <link rel="stylesheet" href="Products/products.css">
+</head>
 <body>
-Your login and password accepted successfully
+    <header>
+        <div><img id="main" src="front/src/img/suai.png" alt="SUAI"></div>
+        <div>
+            <form method="GET" action = "/SUAIshop/catalog">
+            <button class="gradient-button">Goods</button>
+            </form>
+            <form method="POST" action = "/SUAIshop/logout">
+            <button class="gradient-button">LOGOUT</button>
+            </form>
+        </div>
+        
+    </header>
+    <div class = "main_name">
+        <i>Profile
+        </i></div>
+    <div class = "info">
+        <i id="inf_txt"> Profile Info:</i>
+        <div><i id="inf_txt">maks_ru777</i></div>
+        <div><i id="inf_txt">To change password press the button: </i>
+            <a href="other/login.html" class="gradient-button">Change Password</a>
+        </div>
+    </div>
+    <div class = "goods">
+        <i id="mygod_txt"> My orders</i>
+    </div>
+
+    
+
+    <!-- Constants and Utils -->
+    <script src="constants/catalog.js"></script>
+    <script src="constants/root.js"></script>
+    <script src="constants/localStorage.js"></script>
+
+    <!-- Products -->
+    <script src="Products/products.js"></script>
+
+    
 </body>
 </html>

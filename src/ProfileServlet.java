@@ -5,7 +5,7 @@ import java.util.*;
 
 public class ProfileServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
@@ -15,6 +15,8 @@ public class ProfileServlet extends HttpServlet {
         
         String username = user.getLogin();
         out.println("<!DOCTYPE html><html><body>" + "Salam aleikum " + username + "</body</html>");	//заглушка для html страниц
+        
+        showOrders(user, out);
         
         out.close();
     }
