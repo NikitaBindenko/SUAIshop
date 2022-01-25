@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUAI_SHOP</title>
+    <link rel="stylesheet" href="front/src/profile/profile_style.css">
+</head>
+<body>
+    <header>
+        <div><img id="main" src="front/src/img/suai.png" alt="SUAI"></div>
+        <div>
+            <form id = "catalog" method="GET" action = "/SUAIshop/catalog">
+            <button class="gradient-button">Goods</button>
+            </form>
+            <form id = "reg" method="POST" action = "/SUAIshop/logout">
+            <button class="gradient-button">Log Out</button>
+            </form>
+        </div>
+        
+    </header>
+   <div class="lk_div">
+    <div class = "main_name"> Administrator Profile
+        </div>
+    <div class="container_lk">
+        <div class = "goods">
+           <div id="mygood_txt"> Orders</div>  
+           <div class = "goods_container"> 

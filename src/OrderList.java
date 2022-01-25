@@ -67,6 +67,14 @@ public class OrderList {
         }
         return orders;
     }
+    
+    public synchronized LinkedList<Order> getAllOrders(){    //возвращает все заказы
+        LinkedList<Order> orders = new LinkedList<>();
+        for(Order currentOrder : db){
+            orders.add(currentOrder);
+        }
+        return orders;
+    }
 
     public synchronized Order getOrder(int id){  //возвращает заказ с указанным id
         Order neededOrder = new Order();

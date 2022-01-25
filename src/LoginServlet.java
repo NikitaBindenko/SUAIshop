@@ -18,7 +18,12 @@ public class LoginServlet extends HttpServlet {
         if(loggingUser.getPassword().equals(password)){
         	HttpSession session = request.getSession();
         	session.setAttribute("user", loggingUser);	//associates session with object User
-            	response.sendRedirect(request.getContextPath() + "/profile");
+        	if(loggingUser.isSeller()){
+        		response.sendRedirect(request.getContextPath() + "/admin");
+        	}
+        	else{
+            		response.sendRedirect(request.getContextPath() + "/profile");
+            	}
         }
         else{
         	out.println("<!DOCTYPE html><html><body>" + "Please, try again..." + "</body</html>");
