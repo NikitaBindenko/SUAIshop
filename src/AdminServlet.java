@@ -39,7 +39,7 @@ public class AdminServlet extends HttpServlet {
         out.close();
     }
     
-    public void showOrders(User user, PrintWriter out){		//тоже проверить
+    public void showOrders(User user, PrintWriter out){
     	Catalog catalog = new Catalog();
     	OrderList orderlist = new OrderList(catalog);
     	LinkedList<Order> ordersToShow = orderlist.getAllOrders();
@@ -51,8 +51,10 @@ public class AdminServlet extends HttpServlet {
     		out.println("<div class=\"goods_container_item\">");
     		out.println("<div class=\"item_number\">id " + ordersToShow.get(i).getId() + "</div>");
     		out.println("<div class=\"item_info\">");
+    		out.println("<div class = \"info_pos\">User " + ordersToShow.get(i).getUserId() +"</div>");
     		out.println("<div class = \"info_pos\">" + ordersToShow.get(i).getPrice() +"</div>");
     		out.println("<div class = \"info_pos\">" + ordersToShow.get(i).getAddress() +"</div>");
+    		out.println("<div class = \"info_pos\">Items:<br>" + ordersToShow.get(i).toString(true) + "</div>"); //alternative toString method is used to form the order
     		out.println("</div><div class=\"item_block\"><div>");
     		if(status == "created"){out.println("<form method=\"GET\" action = \"/SUAIshop/pack\"><input type=\"hidden\" name=\"orderID\" value=\"" + ordersToShow.get(i).getId() + "\"/><button class=\"item_btn\">pack</button></form>");}
     		out.println("</div><div class=\"item_status\">" + status + "</div></div></div>");

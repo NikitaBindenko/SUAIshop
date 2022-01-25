@@ -59,4 +59,13 @@ public class Order {    //заказ знает своего заказчка, �
         sb.append(address);
         return sb.toString();
     }
+    public String toString(boolean html) {
+    	StringBuilder sb = new StringBuilder();
+    	if(html){
+        	for (Goods goods : order) {
+            		sb.append("id" + goods.getId() + " " + goods.getPrice() + "<br>");
+        	}
+        }
+        return sb.toString();
+    }
 }
