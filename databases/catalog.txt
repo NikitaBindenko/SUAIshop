@@ -1,8 +1,28 @@
 1
-2500
-Vinogradov.jpg
-size: XL, color: Grey
-2
-1700
+5500
 51VW.jpg
-size: S, color: Black
+size: XL, color: Black
+2
+4400
+Vin.jpg
+size: XL, color: Grey
+3
+3000
+guap.png
+size: XL, color: White
+4
+3500
+SJC.jpg
+size: XL, color: Grey
+5
+1000
+T1.jpg
+size: XL, color: Any
+6
+1000
+T2.jpg
+size: XL, color: Other
+7
+1000
+T4.jpg
+size: XL, color: All
