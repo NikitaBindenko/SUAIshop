@@ -22,25 +22,21 @@ public class AdminServlet extends HttpServlet {
         	request.getRequestDispatcher("front/src/admin/admin_profile2.html").include(request, response);  
         	}
         	if (uri.equals("/SUAIshop/pack") ) {
-        	int orderID = Integer.parseInt(request.getParameter("orderID"));
-        	sendPackage(orderID, out);
-        	//response.sendRedirect(request.getContextPath() + "/admin");  
+        		int orderID = Integer.parseInt(request.getParameter("orderID"));
+        		Catalog catalog = new Catalog();
+    			OrderList orderlist = new OrderList(catalog);
+    			Order oldOrder = orderlist.getOrder(orderID);
+    			out.println("\n" + oldOrder);
+    			if(oldOrder.getStatus() == 0){
+    			oldOrder.updateStatus();
+    			}
+    		orderlist.exportOrders();
+        	response.sendRedirect(request.getContextPath() + "/admin");  
         	}
         }
         else{out.println("<!DOCTYPE html><html><body>" + "You don't have enough rights to access this page..." + "</body</html>");}
         
         out.close();
-    }
-    
-    public void sendPackage(int orderID, PrintWriter out){		//проверить
-    	Catalog catalog = new Catalog();
-    	OrderList orderlist = new OrderList(catalog);
-    	Order oldOrder = orderlist.getOrder(orderID);
-    	out.println("\n" + oldOrder);
-    	if(oldOrder.getStatus() == 0){
-    		oldOrder.updateStatus();
-    	}
-    	orderlist.exportOrders();
     }
     
     public void showOrders(User user, PrintWriter out){		//тоже проверить

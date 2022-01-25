@@ -80,7 +80,7 @@ public class OrderList {
         Order neededOrder = new Order();
         for(Order currentOrder : db){
             if (currentOrder.getId() == id) neededOrder = currentOrder;
-            break;
+            //break;
         }
         return neededOrder;
     }
