@@ -18,6 +18,14 @@ public class ProfileServlet extends HttpServlet {
         	request.getRequestDispatcher("front/src/profile/profile1.html").include(request, response);
         	showOrders(user, out);
         	request.getRequestDispatcher("front/src/profile/profile2.html").include(request, response);
+        	out.println(user.getLogin());
+        	request.getRequestDispatcher("front/src/profile/profile3.html").include(request, response);
+        	out.close();   
+        }
+        if (uri.equals("/SUAIshop/confirm") ) {
+        	int orderID = Integer.parseInt(request.getParameter("orderID"));
+        	confirmReceipt(orderID);
+        	response.sendRedirect(request.getContextPath() + "/profile");
         	out.close();   
         }
     }
@@ -65,7 +73,24 @@ public class ProfileServlet extends HttpServlet {
     	OrderList orderlist = new OrderList(catalog);
     	LinkedList<Order> ordersToShow = orderlist.getOrders(user.getId());
     	for(int i = 0; i < ordersToShow.size(); i++){
-    		out.println("<div><i id=\"inf_txt\">" + "\t" + ordersToShow.get(i).getId() + "\t" + ordersToShow.get(i).getPrice() + "\t" + ordersToShow.get(i).getAddress() + "</i></div>");
+    		String status = "";
+    		if(ordersToShow.get(i).getStatus() == 0){status = "created";}
+    		else if(ordersToShow.get(i).getStatus() == 1){status = "sent";}
+    		else if(ordersToShow.get(i).getStatus() == 2){status = "delivered";}
+    		out.println("<div class=\"goods_container_item\">");
+    		out.println("<div class=\"item_number\">id " + ordersToShow.get(i).getId() + "</div>");
+    		out.println("<div class=\"item_info\">");
+    		out.println("<div class = \"info_pos\">" + ordersToShow.get(i).getPrice() +"</div>");
+    		out.println("<div class = \"info_pos\">" + ordersToShow.get(i).getAddress() +"</div>");
+    		out.println("</div><div class=\"item_block\"><div>");
+    		if(status == "sent"){out.println("<form method=\"GET\" action = \"/SUAIshop/confirm\"><input type=\"hidden\" name=\"orderID\" value=\"" + ordersToShow.get(i).getId() + "\"/><button class=\"item_btn\">confirm</button></form>");}
+    		out.println("</div><div class=\"item_status\">" + status + "</div></div></div>");
     	}
     }
 }
+     
+     
+     
+     
+     
+     

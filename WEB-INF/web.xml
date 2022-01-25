@@ -75,4 +75,14 @@
     <url-pattern>/changePassword</url-pattern>
 </servlet-mapping>
 
+<servlet>
+    <servlet-name>profile</servlet-name>
+    <servlet-class>ProfileServlet</servlet-class>
+ </servlet>
+
+ <servlet-mapping>
+    <servlet-name>profile</servlet-name>
+    <url-pattern>/confirm</url-pattern>
+</servlet-mapping>
+
 </web-app>
