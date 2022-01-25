@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -7,48 +7,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUAI_SHOP</title>
     <link rel="stylesheet" href="front/src/profile/profile_style.css">
-    <link rel="stylesheet" href="Products/products.css">
 </head>
 <body>
     <header>
         <div><img id="main" src="front/src/img/suai.png" alt="SUAI"></div>
         <div>
-            <form method="GET" action = "/SUAIshop/catalog">
+            <form id = "catalog" method="GET" action = "/SUAIshop/catalog">
             <button class="gradient-button">Goods</button>
             </form>
-            <form method="POST" action = "/SUAIshop/logout">
-            <button class="gradient-button">LOGOUT</button>
+            <form id = "reg" method="POST" action = "/SUAIshop/logout">
+            <button class="gradient-button">Log Out</button>
             </form>
         </div>
         
     </header>
-    <div class = "main_name">
-        <i>Profile
-        </i></div>
-    <div class = "info">
-        <i id="inf_txt"> Profile Info:</i>
-        <div><i id="inf_txt">maks_ru777</i></div>
-        <div>
+   <div class="lk_div">
+    <div class = "main_name"> My Profile
+        </div>
+    <div class="container_lk">
+        <div class = "goods">
+           <div id="mygood_txt"> My orders</div>  
+           <div class = "goods_container"> 
+               <div class="goods_container_item">
+                   <div class="item_number">id 777777</div>
+                   <div class="item_info">
+                    <div class = "info_pos">Shirt</div>
+                    <div class = "info_pos">Sweater</div>
+                    <div class = "info_pos">Rug</div>
+                    </div>
+                    <div class="item_block">
+
+                        <div>
+                        	<form method="GET" action = "/SUAIshop/confirm">
+            			<button class="item_btn">confirm</button>
+            			</form>
+                        </div>
+
+                        <div class="item_status">Sent</div>
+                    </div>
+                    
+               </div>
+           </div>
+        </div>
+        <div class = "info" >
+            <div id="login">maks_ru777</div>
+            <div id="passw_txt">
             <form method="POST" action = "/SUAIshop/changePassword">
             <input id="inf_txt" type="oldPassword" name="Old Password" placeholder="Old Password">
             <input id="inf_txt" type="newPassword" name="New Password" placeholder="New Password">
-            <input type ="submit" class="gradient-button" value="Change Password">
-            </form>
+            <div id="inf_txt"> </div><input type ="submit" class="gradient-button" value="Change Password"></div>
+            </form></div>
         </div>
+
     </div>
-    <div class = "goods">
-        <i id="mygod_txt"> My orders</i>
-    </div>
+   </div>
 
     
 
     <!-- Constants and Utils -->
-    <script src="constants/catalog.js"></script>
-    <script src="constants/root.js"></script>
-    <script src="constants/localStorage.js"></script>
+    <script src="front/src/constants/catalog.js"></script>
+    <script src="front/src/constants/root.js"></script>
+    <script src="front/src/constants/localStorage.js"></script>
 
     <!-- Products -->
-    <script src="Products/products.js"></script>
+    <script src="front/src/Products/products.js"></script>
 
     
 </body>

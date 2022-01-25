@@ -1,7 +1,6 @@
 
 *{
     box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 :root{
@@ -37,13 +36,13 @@ header{
 }
 
 .main_name{
-    margin-top: 20px;
-    padding-top: 15px;
-    text-align: center;
-    color: #005baa;
-    font-size: 30px;
-    background-color:white;
-    border-radius: 10px;
+    font-family: PT Root UI, sans-serif;
+    margin: 7px 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    color: #48226e;
 }
 
 #main{
@@ -54,26 +53,34 @@ header{
 .gradient-button {
     text-decoration: none;
     display: inline-block;
-    color: white;
     padding: 15px 15px;
     margin: 35px 15px 35px 7px;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
-    background-size: 200% auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     transition: .5s;
+    font-family: PT Root UI, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1D3057;
+    width: fit-content;
+    height: 50px;
+    background-image: linear-gradient(to right, #fcbbbd 3%, #a36abc 90% );
+    border-radius: 3px;
 }
 .gradient-button:hover {
     background-position: right center;
+    background-image: linear-gradient(to right, #a36abc 3%, #a36abc 90% );
+    transition: 10s;
 }
 
 .info{
     margin-top: 20px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 1px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    margin: 0 100px 30px 30px;
+    text-align: center;
 }
 
 #inf_txt{
@@ -84,14 +91,22 @@ header{
 
 .goods{
     margin-top: 20px;
-    text-align: center;
     background-color: white;
     border-radius: 10px;
+    width: 850px;
 }
 
-#mygod_txt{
-    color: #005baa;
-    font-size: 30px;
+#mygood_txt{
+    font-family: PT Root UI, sans-serif;
+    margin-bottom: 23px;
+    margin-top: 7px;
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 25px;
+    color: #48226e;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 .footer-class{
@@ -99,3 +114,128 @@ header{
     height: 100px;
     border-radius: 10px;
 }
+
+.lk_div{
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 100px;
+}
+
+.container_lk{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#login{
+    text-align: center;
+    font-family: PT Root UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #48226e;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 20px 0;
+    margin: 0 15px;
+}
+
+#passw_txt{
+    text-align: center;
+    font-family: PT Root UI, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #48226e;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 20px 0;
+    margin: 0 15px;
+}
+
+.goods_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 25px;
+}
+
+.goods_container_item{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 29px 30px 34px 30px;
+}
+
+.item_number{
+    font-family: PT Root UI, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 14px ;
+}
+
+.info_pos{
+    font-family: PT Root UI, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #999999;
+}
+
+.item_status{
+    font-family: PT Root UI, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: right;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #999999;
+    padding-top: 8px;
+}
+
+.item_block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.item_btn{
+    width: fit-content;
+    height: 39px;
+    padding: 7px 10px;
+    background: rgba(29, 48, 87, 0.1);
+    border-radius: 3px;
+    font-family: PT Root UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1D3057;
+}
+
+.item_btn a{
+    font-family: PT Root UI, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1D3057;
+}
+
+/* .item_btn :hover {
+   background-color:  rgba(29, 48, 87, 0.2);
+   cursor: pointer;
+} */
