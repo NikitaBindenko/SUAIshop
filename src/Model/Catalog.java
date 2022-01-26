@@ -1,3 +1,5 @@
+package Model;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,7 +13,7 @@ public class Catalog {
     String dbFilesDirectory = directory.getParent();
     File catalog = new File(dbFilesDirectory + "/webapps/SUAIshop/databases/catalog.txt");
 
-    Catalog(){
+    public Catalog(){
         db = new LinkedList<>();
         db = importGoods();
     }

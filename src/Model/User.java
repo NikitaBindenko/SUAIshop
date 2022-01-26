@@ -1,3 +1,4 @@
+package Model;
 
 import java.util.*;
 
@@ -49,7 +50,7 @@ public class User {
         this.password = password;
     }
 
-    boolean isSeller(){
+    public boolean isSeller(){
         return isSeller;
     }   //возвращает 1 если пользователь явлется продавцом(администратором)
 

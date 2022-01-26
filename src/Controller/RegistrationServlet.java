@@ -1,3 +1,6 @@
+package Controller;
+
+import Model.*;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -29,7 +32,7 @@ public class RegistrationServlet extends HttpServlet {
         	out.println("<!DOCTYPE html><html><body>" + "Вы успешно зарегестрированы!" + "</body</html>");
         }
         
-	request.getRequestDispatcher("front/src/profile/profile.html").include(request, response);
+	//response.sendRedirect(request.getContextPath() + "/profile");
         out.close();
     }
 
