@@ -7,7 +7,7 @@
    
  <servlet>
     <servlet-name>catalog</servlet-name>
-    <servlet-class>CatalogServlet</servlet-class>
+    <servlet-class>Controller.CatalogServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -17,7 +17,7 @@
 
 <servlet>
     <servlet-name>login</servlet-name>
-    <servlet-class>LoginServlet</servlet-class>
+    <servlet-class>Controller.LoginServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -27,7 +27,7 @@
 
 <servlet>
     <servlet-name>logout</servlet-name>
-    <servlet-class>LogoutServlet</servlet-class>
+    <servlet-class>Controller.LogoutServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -37,7 +37,7 @@
 
 <servlet>
     <servlet-name>registration</servlet-name>
-    <servlet-class>RegistrationServlet</servlet-class>
+    <servlet-class>Controller.RegistrationServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -47,7 +47,7 @@
 
 <servlet>
     <servlet-name>bin</servlet-name>
-    <servlet-class>BinServlet</servlet-class>
+    <servlet-class>Controller.BinServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -57,7 +57,7 @@
 
 <servlet>
     <servlet-name>profile</servlet-name>
-    <servlet-class>ProfileServlet</servlet-class>
+    <servlet-class>Controller.ProfileServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -67,7 +67,7 @@
 
 <servlet>
     <servlet-name>profile</servlet-name>
-    <servlet-class>ProfileServlet</servlet-class>
+    <servlet-class>Controller.ProfileServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -77,7 +77,7 @@
 
 <servlet>
     <servlet-name>profile</servlet-name>
-    <servlet-class>ProfileServlet</servlet-class>
+    <servlet-class>Controller.ProfileServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -87,7 +87,7 @@
 
 <servlet>
     <servlet-name>admin</servlet-name>
-    <servlet-class>AdminServlet</servlet-class>
+    <servlet-class>Controller.AdminServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
@@ -97,7 +97,7 @@
 
 <servlet>
     <servlet-name>admin</servlet-name>
-    <servlet-class>AdminServlet</servlet-class>
+    <servlet-class>Controller.AdminServlet</servlet-class>
  </servlet>
 
  <servlet-mapping>
