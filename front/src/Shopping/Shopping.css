@@ -1,0 +1,77 @@
+*{
+    font-family: PT Root UI, sans-serif;
+    font-style: normal;
+}
+
+
+
+.shopping-container{
+    width: 50%;
+    height: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: var(--spacing-large);
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.shopping-element{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    margin: 12px;
+}
+
+.shopping-element__name{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #48226e;
+}
+
+.shopping-element__price{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #48226e;
+}
+
+.shopping-element.sum{
+ border: none;
+ margin-top: 20px;
+}
+
+.shopping-element__name.sum{
+    font-weight: bold;
+}
+
+.shopping-element.sum.shopping-element__price{
+    font-weight: bold;
+}
+
+.shopping-container__close{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+input[type="adress"] {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.accept{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ 
+

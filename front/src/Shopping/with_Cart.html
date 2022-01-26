@@ -8,13 +8,15 @@
     <title>SUAI_SHOP</title>
     <link rel="stylesheet" href="front/src/css/style.css">
     <link rel="stylesheet" href="front/src/Products/products.css">
+    <link rel="stylesheet" href="front/src/Shopping/Shopping.css">
 </head>
 <body>
     <header>
         <div><img id="main" src="front/src/img/suai.png" alt="SUAI"></div>
         <div>
-            <a href="front/src/profile/login.html" id = "login" class="gradient-button">Log In</a>
-            <a href="front/src/profile/registration.html" id = "reg" class="gradient-button">Registration</a>
+            <div class="gradient-button"  onmouseover= "this.style.cursor = (pointer);" onclick="shoppingPage.render()">Cart</div>
+            <a href="front/src/profile/login.html" id = "login" class="gradient-button">My Profile</a>
+            <a href="front/src/profile/registration.html" id = "reg" class="gradient-button">Log Out</a>
         </div>
         
     </header>
@@ -23,6 +25,8 @@
         <h2 class="catalog"><img id="catal" src="front/src/img/catalog.png" alt="Каталог Товаров"></h2>
         <div id="products"></div>
     </div>
+
+    <div id = "shopping"></div>
     
     <footer>
         <div class="footer-class"></div>
@@ -35,6 +39,11 @@
 
     <!-- Products -->
     <script src="front/src/Products/products.js"></script>
+
+    <!-- Shopping Cart -->
+    <script src="front/src/Shopping/Shopping.js"></script>
+
+    <script src="https://kit.fontawesome.com/36f34213e9.js" crossorigin="anonymous"></script>
     
 </body>
 </html>

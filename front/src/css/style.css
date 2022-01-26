@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: PT Root UI, sans-serif;
 }
 
 :root{
@@ -21,12 +21,16 @@ html{
 }
 
 
+body{
+    position: relative;
+}
+
 header{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color:white;
-    border-radius: 10px;
+
 }
 
 .main_but{
@@ -64,9 +68,11 @@ header{
     background-size: 200% auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     transition: .5s;
+    cursor: pointer;
 }
 .gradient-button:hover {
     background-position: right center;
+    cursor: pointer;
 }
 
 .container{
@@ -92,3 +98,10 @@ header{
     height: 100px;
     border-radius: 10px;
 }
+
+/* #shopping{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+} */
