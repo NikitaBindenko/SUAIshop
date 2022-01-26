@@ -11,24 +11,26 @@ public class BinServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("user");	//получаем текущего пользователя
         Catalog catalog = new Catalog();			//создаем каталог для поиска товара
-        String goodsID = request.getParameter("id");		//получаем id товара
-        String action = request.getParameter("act");		//определяем необходимое действие 1-добавить 0-удалить
-        if(action.equals("1")){
-        	Goods addedGoods = catalog.getGoods(Integer.parseInt(goodsID));	//поиск товара в каталоге по id
-        	user.addToBin(addedGoods);
+        String address = request.getParameter("Adress");	//получаем адрес покупателя
+        String goodsIDs = request.getParameter("products");	//получаем строку с параметрами (id заказанных товаров)
+        String[] goodsID = goodsIDs.split(",");
+        LinkedList<Goods> listOfGoods = new LinkedList<>();
+        int commonPrice = 0;
+        for(int num = 0; num < goodsID.length; num++){
+        	Goods addedGoods = catalog.getGoods(Integer.parseInt(goodsID[num]));
+        	listOfGoods.add(addedGoods);
+        	commonPrice = commonPrice + addedGoods.getPrice();
         }
-        else if(action.equals("0")){
-        	Goods deletedGoods = catalog.getGoods(Integer.parseInt(goodsID));
-        	user.deleteFromBin(deletedGoods);
-        }
-        PrintWriter out = response.getWriter();
-	out.println("<!DOCTYPE html><html><body>");
-	LinkedList<Goods> cart = user.getBin().getBin();
-	for(int num = 0; num < cart.size(); num++){
-		out.println(cart.get(num).getImageName() + "\n");
-	}
-	out.println("</body</html>");
-        out.close();
+        Order order = new Order(generateID(), user.getId(), 0, commonPrice, listOfGoods, address);
+        OrderList orderlist = new OrderList(catalog);
+        orderlist.addOrder(order);
+        orderlist.exportOrders();
+        
+        response.sendRedirect(request.getContextPath() + "/profile");
+    }
+    
+    public int generateID(){
+    	return (int)(Math.random() * 1000000 % 899998) + 100000;
     }
 
 }

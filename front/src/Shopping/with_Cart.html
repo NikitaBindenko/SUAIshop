@@ -15,8 +15,12 @@
         <div><img id="main" src="front/src/img/suai.png" alt="SUAI"></div>
         <div>
             <div class="gradient-button"  onmouseover= "this.style.cursor = (pointer);" onclick="shoppingPage.render()">Cart</div>
-            <a href="front/src/profile/login.html" id = "login" class="gradient-button">My Profile</a>
-            <a href="front/src/profile/registration.html" id = "reg" class="gradient-button">Log Out</a>
+            <form style="display:inline" id = "login" method="GET" action = "/SUAIshop/profile">
+            <button class="gradient-button">My Profile</button>
+            </form>
+            <form style="display:inline" id = "reg" method="POST" action = "/SUAIshop/logout">
+            <button class="gradient-button">Log Out</button>
+            </form>
         </div>
         
     </header>
