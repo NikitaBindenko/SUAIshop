@@ -21,7 +21,7 @@ public class RegistrationServlet extends HttpServlet {
         User loggingUser = userlist.getUser(name);
         
         if(loggingUser.getId() != 999){
-        	out.println("<!DOCTYPE html><html><body>" + "Пользователь уже существует" + "</body</html>");
+        	out.println("<!DOCTYPE html><html><body>" + "User already exists!" + "</body</html>");
         }	//refuse registration - user was found in userlist
         else{
         	loggingUser.setLogin(name);
@@ -29,7 +29,10 @@ public class RegistrationServlet extends HttpServlet {
         	loggingUser.setId((int)(System.currentTimeMillis() % 990) + 1);	//УБРАТЬ РАНДОМ
         	userlist.addUser(loggingUser);
         	userlist.exportUsers();
-        	out.println("<!DOCTYPE html><html><body>" + "Вы успешно зарегестрированы!" + "</body</html>");
+        	HttpSession session = request.getSession();
+        	session.setAttribute("user", loggingUser);
+        	//out.println("<!DOCTYPE html><html><body>" + "Вы успешно зарегестрированы!" + "</body</html>");
+        	response.sendRedirect(request.getContextPath() + "/profile");
         }
         
 	//response.sendRedirect(request.getContextPath() + "/profile");
