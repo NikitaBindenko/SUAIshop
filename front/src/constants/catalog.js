@@ -1,5 +1,5 @@
 let CATALOG = [
-    {
+   /* {
         id: '1',
         name: 'VOLKSWAGEN TOP',
         img: 'front/src/items/Volks.jpg',
@@ -40,5 +40,5 @@ let CATALOG = [
         name: 'T4',
         img: 'front/src/items/T4.jpg',
         price: 1000,
-    }
+    }*/
 ];

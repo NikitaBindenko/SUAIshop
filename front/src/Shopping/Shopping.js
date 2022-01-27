@@ -40,7 +40,7 @@ class Shopping{
             </div>
             <div>
                 <form method="GET" action="/SUAIshop/bin" class="accept">
-                <input id="inf_txt" type="adress" name="Adress" placeholder="Input your Adress">
+                <input id="in_adress" type="adress" name="Adress" placeholder="Input your Adress">
                 <input type = "hidden" name = "products" value="${localStorageUtil.getProducts()}">
                 <input type ="submit" class="gradient-button" value="Оформить заказ">
                 </form>

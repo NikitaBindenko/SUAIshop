@@ -7,25 +7,31 @@ class Products {
         this.labelRemove = 'Delete from Cart';
     }
 
-    /*readTextFile(){
+    readTextFile(){
     var file = new XMLHttpRequest();
-    file.open("GET", "front/src/Products/cat.txt", true);
+    var tmp = CATALOG;
+    file.open("GET", "front/src/Products/cat.txt", false);
     file.onreadystatechange = function ()
     {
         if(file.readyState === 4)
         {
             if(file.status === 200 || file.status == 0)
             {
-                let allText = file.responseText;
-                CATALOG.push({id:allText.split('\r\n')[0], name:allText.split('\r\n')[1], 
-                img:allText.split('\r\n')[2], price:Number(allText.split('\r\n')[3])})
+                let allText = file.responseText.split('\r\n');
+                console.log(allText);
+                for(let i = 0; i < allText.length; i += 4){
+                    tmp.push({id:allText[i], name:allText[i + 1], 
+                    img:allText[i + 2], price:Number(allText[i + 3])});
+                }
             }
         }
     }
     file.send(null);
-    }*/
+    return tmp;
+    }
 
     handleSetLocationStorage(element, id){
+
       const {push, products} = localStorageUtil.putProducts(id);
       
       if(push){
@@ -40,8 +46,8 @@ class Products {
 
     render() {
         const productsStore = localStorageUtil.getProducts();
-        console.log(productsStore);
         let htmlCatalog = '';
+        let counter = 0;
 
         CATALOG.forEach(({ id, name, price, img }) => {
             let activeClass = '';
@@ -65,7 +71,33 @@ class Products {
                     <button class="elm__btn${activeClass}" onclick="productsPage.handleSetLocationStorage(this, '${id}')">${activeText}</button>
                 </li>
             `;
+            ++counter;
         });
+
+       /* for(let i = 0; i < CATALOG.length + 1; ++i ){
+            console.log(CATALOG);
+            let activeClass = '';
+            let activeText = '';
+
+            if (productsStore.indexOf(CATALOG[i].id) == -1 ){
+                activeText =  this.labelAdd;
+            }
+            else{
+                activeClass = ' ' + this.classNameActive;
+                activeText = this.labelRemove;
+            }
+
+            htmlCatalog += `
+                <li class="elm">
+                    <span class="elm__name">${CATALOG[i].name}</span>
+                    <img class="elm__img" src="${CATALOG[i].img}" />
+                    <span class="elm__price">
+                        ${CATALOG[i].price.toLocaleString()} RUB
+                    </span>
+                    <button class="elm__btn${activeClass}" onclick="productsPage.handleSetLocationStorage(this, '${CATALOG[i].id}')">${activeText}</button>
+                </li>
+            `;
+        } */
 
         const html = `
             <ul class="products-container">
@@ -75,11 +107,12 @@ class Products {
 
 
         ROOT_PRODUCTS.innerHTML = html;
-        //localStorageUtil.clear();
     }
 }
 
+
 localStorageUtil.clear();
+
 const productsPage = new Products();
-//productsPage.readTextFile();
+CATALOG = productsPage.readTextFile();
 productsPage.render();

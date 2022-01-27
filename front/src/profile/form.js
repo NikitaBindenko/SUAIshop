@@ -14,3 +14,8 @@ $('#login-button').click(function(){
     });
   });
   
+  $('#forgotten').click(function(){
+    $("#container").fadeOut(function(){
+      $("#forgotten-container").fadeIn();
+    });
+  });

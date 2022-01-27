@@ -66,6 +66,8 @@ input[type="adress"] {
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
+    height: fit-content;
+    margin-top: 45px;
 }
 
 .accept{
@@ -73,5 +75,7 @@ input[type="adress"] {
     flex-direction: row;
     justify-content: space-between;
 }
+
+
  
 
