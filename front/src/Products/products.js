@@ -55,6 +55,8 @@ class Products {
         `;
 
         ROOT_PRODUCTS.innerHTML = html;
+
+        localStorageUtil.clear();
     }
 }
 

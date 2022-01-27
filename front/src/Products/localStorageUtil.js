@@ -26,6 +26,10 @@ class LocalStorageUtil{
 
        return{push, products}
     }
+
+    clear(){
+       localStorage.clear();
+    }
 }
 
 

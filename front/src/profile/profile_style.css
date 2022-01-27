@@ -26,7 +26,6 @@ header{
     justify-content: space-between;
     flex-wrap: wrap;
     background-color:white;
-    border-radius: 10px;
 }
 
 .main_but{
@@ -55,7 +54,7 @@ header{
     display: inline-block;
     padding: 15px 15px;
     margin: 35px 15px 35px 7px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, .1);
     transition: .5s;
     font-family: PT Root UI, sans-serif;
     font-style: normal;
@@ -67,11 +66,13 @@ header{
     height: 50px;
     background-image: linear-gradient(to right, #fcbbbd 3%, #a36abc 90% );
     border-radius: 3px;
+    cursor: pointer;
 }
 .gradient-button:hover {
     background-position: right center;
     background-image: linear-gradient(to right, #a36abc 3%, #a36abc 90% );
     transition: 10s;
+    cursor: pointer;
 }
 
 .info{
@@ -79,14 +80,17 @@ header{
     background-color: white;
     border-radius: 1px;
     border: 2px solid rgba(0, 0, 0, 0.1);
-    margin: 0 100px 30px 30px;
+    margin: 0 60px 30px 30px;
     text-align: center;
+    width: min-content;
 }
 
 #inf_txt{
     text-align: left;
+    margin-top: 10px;
     color: #005baa;
     font-size: 30px;
+    width: 300px;
 }
 
 .goods{
@@ -235,7 +239,32 @@ header{
     color: #1D3057;
 }
 
-/* .item_btn :hover {
-   background-color:  rgba(29, 48, 87, 0.2);
-   cursor: pointer;
-} */
+.logo{
+    display: flex;
+}
+
+.left_logo{
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 48px;
+    text-transform: uppercase;
+    background: url("https://i.pinimg.com/originals/d7/59/44/d759447b869765bd98d827565055407e.gif") top -130px center;  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-right: 2px solid rgba(0, 0, 0, .1);
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.right_logo{
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 25px;
+    color: #48226e;
+    margin-top: 10px;
+    margin-left: 10px;
+}

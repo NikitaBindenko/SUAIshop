@@ -17,7 +17,7 @@
 }
 
 html{
-    background: url(https://phonoteka.org/uploads/posts/2021-06/1622503925_18-phonoteka_org-p-kosmos-art-galaktika-krasivo-18.jpg) no-repeat center center fixed; 
+    background: url(https://phonoteka.org/uploads/posts/2021-06/1622503925_18-phonoteka_org-p-kosmos-art-galaktika-krasivo-18.jpg) no-repeat center center fixed;  
 }
 
 
@@ -33,26 +33,17 @@ header{
 
 }
 
-.main_but{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
 
 .main_name{
-    margin-top: 20px;
-    padding-top: 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    color: #48226e;
+    background-color: white;
     text-align: center;
-    color: #005baa;
-    font-size: 30px;
-    background-color:white;
-    border-radius: 10px;
 }
 
-#main{
-    width: 600px;
-    height: 100px;
-}
 
 .gradient-button {
     text-decoration: none;
@@ -80,7 +71,11 @@ header{
     border-radius: 10px;
 }
 .catalog{
-    margin-top: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 25px;
+    color: #48226e;
 }
 #catal{
     width: 350px;
@@ -99,9 +94,54 @@ header{
     border-radius: 10px;
 }
 
-/* #shopping{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-} */
+.background {
+    text-align: center;
+    width: 100%;
+    background: #ffffff;
+    /*background: url("https://i.pinimg.com/originals/d7/59/44/d759447b869765bd98d827565055407e.gif") top center;  */
+}
+.background-text {
+    padding: 10px 20px;
+    background: #ffffff;
+    display: inline-block;
+}
+.background-text span {
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 125px;
+    line-height: 48px;
+    text-transform: uppercase;
+    background: url("https://i.pinimg.com/originals/d7/59/44/d759447b869765bd98d827565055407e.gif") top -130px center;  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo{
+    display: flex;
+}
+
+.left_logo{
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 48px;
+    text-transform: uppercase;
+    background: url("https://i.pinimg.com/originals/d7/59/44/d759447b869765bd98d827565055407e.gif") top -130px center;  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-right: 2px solid rgba(0, 0, 0, .1);
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.right_logo{
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 25px;
+    color: #48226e;
+    margin-top: 10px;
+    margin-left: 10px;
+}
