@@ -1,0 +1,13 @@
+html{
+    background: url(https://phonoteka.org/uploads/posts/2021-06/1622503925_18-phonoteka_org-p-kosmos-art-galaktika-krasivo-18.jpg) no-repeat center center fixed; 
+}
+
+#words{
+    color:black;
+    font-family: monospace;
+    font-stretch: ultra-expanded;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 460px;
+    margin-left: 780px;
+}

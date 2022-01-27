@@ -15,8 +15,11 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("pass");
         PrintWriter out = response.getWriter();
         
+        if(name == "" || password == ""){out.println("<!DOCTYPE html><html><head><link rel=\"stylesheet\" href=\"front/src/service_style.css\"></head><body>" + "<div id=\"words\" >Please, fill the fields!</div>" + "</body</html>");}	//check if login and password were typed
+        
         Database userlist = new Database();
         User loggingUser = userlist.getUser(name);
+        if(!(loggingUser.getLogin().equals("") || loggingUser.getPassword().equals(""))){
         
         if(loggingUser.getPassword().equals(password)){
         	HttpSession session = request.getSession();
@@ -27,9 +30,10 @@ public class LoginServlet extends HttpServlet {
         	else{
             		response.sendRedirect(request.getContextPath() + "/profile");
             	}
+            }
         }
         else{
-        	out.println("<!DOCTYPE html><html><body>" + "Please, try again..." + "</body</html>");
+        	out.println("<!DOCTYPE html><html><head><link rel=\"stylesheet\" href=\"front/src/service_style.css\"></head><body>" + "<div id=\"words\" >Please, try again...</div>" + "</body</html>");
         }
         out.close();
     }

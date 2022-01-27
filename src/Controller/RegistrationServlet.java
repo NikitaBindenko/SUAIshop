@@ -15,13 +15,13 @@ public class RegistrationServlet extends HttpServlet {
         String password = request.getParameter("pass");
         PrintWriter out = response.getWriter();
         
-        if(name == null || password == null){out.println("<!DOCTYPE html><html><body>" + "Please, try again..." + "</body</html>");}	//check if login and password were typed
-        
+        if(name.equals("") || password.equals("")){out.println("<!DOCTYPE html><html><head><link rel=\"stylesheet\" href=\"front/src/service_style.css\"></head><body>" + "<div id=\"words\" >Please, try again...</div>" + "</body</html>");}	//check if login and password were typed
+        else{
         Database userlist = new Database();
         User loggingUser = userlist.getUser(name);
         
         if(loggingUser.getId() != 999){
-        	out.println("<!DOCTYPE html><html><body>" + "User already exists!" + "</body</html>");
+        	out.println("<!DOCTYPE html><html><head><link rel=\"stylesheet\" href=\"front/src/service_style.css\"></head><body>" + "<div id=\"words\" >User " + loggingUser.getLogin() +" already exists!</div>" + "</body</html>");
         }	//refuse registration - user was found in userlist
         else{
         	loggingUser.setLogin(name);
@@ -34,9 +34,7 @@ public class RegistrationServlet extends HttpServlet {
         	//out.println("<!DOCTYPE html><html><body>" + "Вы успешно зарегестрированы!" + "</body</html>");
         	response.sendRedirect(request.getContextPath() + "/profile");
         }
-        
-	//response.sendRedirect(request.getContextPath() + "/profile");
         out.close();
     }
-
+  }
 }
