@@ -4,3 +4,4 @@
 515639 486 2 11900 1 2 6 5 Moskovsky_149
 321321 282 1 10000 4 1 7 Bolshaya_Morskaya_67
 362447 835 0 8500 3 1 Donbass
+406432 549 0 13400 1 2 4 Porhov_1_st_Victory_lane

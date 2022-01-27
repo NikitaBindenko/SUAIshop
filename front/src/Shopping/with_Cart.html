@@ -12,7 +12,10 @@
 </head>
 <body>
     <header>
-        <div><img id="main" src="front/src/img/suai.png" alt="SUAI"></div>
+        <div class="logo">
+            <div class = "left_logo"><span>SS</span></div>
+            <div class = "right_logo"><span>SUAI <br> SHOP </span></div>
+        </div>
         <div>
             <div class="gradient-button"  onmouseover= "this.style.cursor = (pointer);" onclick="shoppingPage.render()">Cart</div>
             <form style="display:inline" id = "login" method="GET" action = "/SUAIshop/profile">
@@ -24,9 +27,11 @@
         </div>
         
     </header>
+    <div class="background">
+        <div class="background-text"><span>SUAI SHOP</span></div>    
+    </div>
     <div class = "main_name">Лучшие товары с символикой SUAI</div>
     <div class="container">
-        <h2 class="catalog"><img id="catal" src="front/src/img/catalog.png" alt="Каталог Товаров"></h2>
         <div id="products"></div>
     </div>
 

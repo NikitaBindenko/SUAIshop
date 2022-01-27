@@ -1,4 +1,4 @@
-const CATALOG = [
+let CATALOG = [
     {
         id: '1',
         name: 'VOLKSWAGEN TOP',

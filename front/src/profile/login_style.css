@@ -113,9 +113,9 @@ html {
   /* Placeholders */
   ::-webkit-input-placeholder {
      color: #ddd;  }
-  :-moz-placeholder { /* Firefox 18- */
+  :-moz-placeholder { 
      color: red;  }
-  ::-moz-placeholder {  /* Firefox 19+ */
+  ::-moz-placeholder {  
      color: red;  }
   :-ms-input-placeholder {  
      color: #333;  }
