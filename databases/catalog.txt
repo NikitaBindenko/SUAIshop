@@ -26,3 +26,19 @@ size: XL, color: Other
 1000
 T4.jpg
 size: XL, color: All
+8
+7000
+chaiki.jpg
+size: XL
+9
+500
+mask.jpg
+size: XL
+10
+1500
+svyaz.jpg
+size: XL
+11
+2500
+udp.jpg
+size: XL
